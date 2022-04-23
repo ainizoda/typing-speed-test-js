@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.root {
+  height: 70%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  /* align-items: center; */
+}
+
+.root .area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.root .bar {
+  font-size: 28px;
+  padding: 0 4px;
+  color: blue;
+  display: flex;
+}
+
+.root .bar .speed {
+  display: none;
+  gap: 8px;
+}
+
+.root .bar #speedVal {
+  color: #000;
+}
+
+.area {
+  filter: blur(0.4vh);
+}
+
+.area:focus {
+  filter: none;
+  border: none;
+  outline: none;
+}
+
+.area .word {
+  padding: 2px 4px;
+}
+
+.area .current {
+  animation: animate 700ms infinite;
+}
+
+.area .letter {
+  font-size: 24px;
+  font-family: sans-serif;
+  padding: 0 1px;
+}
+
+.correct {
+  color: rgb(52, 198, 127);
+}
+
+@keyframes animate {
+  0% {
+    border-bottom: 3px solid #000;
+  }
+  100% {
+    border-bottom: none;
+  }
+}
